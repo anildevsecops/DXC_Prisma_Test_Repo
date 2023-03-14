@@ -1,3 +1,4 @@
+#ciscan
 name: Prisma Cloud IaC-CI Scan
 
 on:
