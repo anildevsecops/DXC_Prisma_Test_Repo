@@ -1,4 +1,5 @@
-export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMAAA
-export AWS_SECRET_ACCESS_KEY=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
-export AWS_DEFAULT_REGION=us-west-2
-export AWS_ACCESS_KEY_ID=NN7EXIOSFODAMABAAKIA
+provider "aws" {
+  region     = "us-west-2"
+  access_key = "AKIAI44QH8DHBEXAMPLE"
+  secret_key = "je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY"
+}
