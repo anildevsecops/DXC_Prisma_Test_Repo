@@ -9,6 +9,18 @@ permissions:
   contents: read
 
 jobs:
+  TruffleHog_Secret_Scan:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    name: Run TruffleHog_Scan
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: TruffleHog OSS
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
   prisma_cloud_iac_DAST_scan:
     permissions:
       contents: read # for actions/checkout to fetch code
