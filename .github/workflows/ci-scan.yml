@@ -17,11 +17,16 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-      - name: TruffleHog OSS
+      - name: TruffleHog OSS Unverified
         uses: trufflesecurity/trufflehog@main
         with:
           path: ./
-          extra_args: --debug --no-verification
+          extra_args: --debug
+      - name: TruffleHog OSS Verified
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          extra_args: --debug --only-verification
   prisma_cloud_iac_DAST_scan:
     needs: TruffleHog_Secret_Scan
     permissions:
